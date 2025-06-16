@@ -1,131 +1,127 @@
-# Crazy Golf Score Analyzer
+# Crazy Golf Score Analyser
 
-A comprehensive Python tool for analyzing crazy golf (mini golf) scores with detailed statistics and visualizations.
+A comprehensive Python tool for analysing crazy golf (mini golf) scores with detailed statistics and visualisations.
 
 ## Features
 
-- **Statistical Analysis**: Calculate totals, averages, best/worst holes, and consistency metrics
-- **Player Rankings**: Automatic ranking based on total scores
-- **Hole Difficulty Analysis**: Identify the hardest and easiest holes
-- **Performance Insights**: Mental resilience, consistency streaks, and performance trends
-- **Comprehensive Visualizations**: 9 different charts showing various aspects of performance
-- **Flexible Input**: Read scores from text file with easy-to-edit format
+- Statistical Analysis: Calculate totals, averages, best/worst holes, and consistency metrics  
+- Player Rankings: Automatic ranking based on total scores  
+- Hole Difficulty Analysis: Identify the hardest and easiest holes  
+- Performance Insights: Mental resilience, consistency streaks, and performance trends  
+- Comprehensive Visualisations: 9 different charts showing various aspects of performance  
+- Flexible Input: Read scores from text file with easy-to-edit format  
 
 ## Requirements
 
-### Python Libraries
+### Python Libraries  
 Install the required libraries using pip:
 
-```bash
-pip install pandas numpy matplotlib seaborn
-```
+    pip install pandas numpy matplotlib seaborn
 
 Or install all at once:
-```bash
-pip install pandas numpy matplotlib seaborn statistics
-```
 
-### Python Version
+    pip install pandas numpy matplotlib seaborn statistics
+
+### Python Version  
 - Python 3.6 or higher
 
 ## File Structure
-```
-crazy_golf_analyser/
-├── crazy_golf_analysis.py    # Main analysis script
-├── golf_scores.txt          # Score data file
-└── README.md               # This file
-```
+
+    crazy_golf_analyser/
+    ├── crazy_golf_analysis.py    # Main analysis script
+    ├── golf_scores.txt           # Score data file
+    └── README.md                 # This file
 
 ## How to Run
 
-1. **Prepare your score data**:
-   - Edit [`golf_scores.txt`](golf_scores.txt) with your player names and scores
-   - Follow the format: `PlayerName: score1, score2, score3, ...`
-   - You can use commas or spaces to separate scores
-   - Lines starting with `#` are comments and will be ignored
+1. Prepare your score data:
+   - Edit `golf_scores.txt` with your player names and scores  
+   - Format: `PlayerName: score1, score2, score3, ...`  
+   - Use commas or spaces to separate scores  
+   - Lines starting with `#` are comments and will be ignored  
 
-2. **Run the analysis**:
-   ```bash
-   python crazy_golf_analysis.py
-   ```
+2. Run the analysis:
 
-3. **View results**:
-   - Statistical analysis will be printed to the console
-   - A comprehensive visualization will be saved as `crazy_golf_all_analysis.png` in your Downloads folder
-   - The visualization window will also display interactively
+       python crazy_golf_analysis.py
+
+3. View results:
+   - Stats printed in the console  
+   - A visualisation saved to your Downloads folder as `crazy_golf_all_analysis.png`  
+   - A visualisation window will also open interactively  
 
 ## Score File Format
 
-The [`golf_scores.txt`](golf_scores.txt) file should follow this format:
+Example:
 
-```
-Player 1: 2, 2, 2, 5, 2, 2, 4, 2, 2, 5, 3, 2, 2, 2, 2, 2, 3, 2
-Player 2: 3, 2, 2, 3, 3, 4, 3, 2, 2, 4, 3, 3, 2, 1, 2, 3, 2, 1
-Player 3: 4 5 3 3 4 4 5 2 2 6 2 3 1 3 5 2 3 6
-# This is a comment line - it will be ignored
-# You can use commas, spaces, or both to separate scores
-```
+    Player 1: 2, 2, 2, 5, 2, 2, 4, 2, 2, 5, 3, 2, 2, 2, 2, 2, 3, 2
+    Player 2: 3, 2, 2, 3, 3, 4, 3, 2, 2, 4, 3, 3, 2, 1, 2, 3, 2, 1
+    Player 3: 4 5 3 3 4 4 5 2 2 6 2 3 1 3 5 2 3 6
+    # This is a comment line - it will be ignored
+    # You can use commas, spaces, or both to separate scores
 
 ## Output
 
 ### Console Output
-- Player summary with totals, averages, best/worst holes
-- Player rankings by total score
-- Hole difficulty analysis
-- Performance insights (consistency, aces)
-- Performance trends (improvement/decline)
 
-### Visualizations
-The script generates a comprehensive 9-panel visualization showing:
-1. **Total Scores Comparison** - Bar chart of final scores
-2. **Score Distribution** - Box plots showing score ranges per player
-3. **Hole Difficulty** - Line chart of average scores per hole
-4. **Performance by Hole** - Individual player performance across all holes
-5. **Score Frequency Heatmap** - How often each player scored 1-6+ strokes
-6. **Cumulative Progression** - Running total scores throughout the round
-7. **Performance by Course Segment** - Radar chart of performance in 3 sections
-8. **Mental Resilience** - How players perform after good vs bad holes
-9. **Consistency Streaks** - Longest consecutive good/bad hole streaks
+- Player summaries: totals, averages, best/worst holes  
+- Player rankings by total score  
+- Hole difficulty analysis  
+- Performance insights (consistency, aces)  
+- Performance trends  
+
+### Visualisations
+
+9-panel output:
+
+1. Total Scores Comparison (bar chart)  
+2. Score Distribution (box plots)  
+3. Hole Difficulty (line chart)  
+4. Performance by Hole  
+5. Score Frequency Heatmap  
+6. Cumulative Progression  
+7. Performance by Course Segment (radar chart)  
+8. Mental Resilience  
+9. Consistency Streaks  
 
 ## Troubleshooting
 
 ### File Not Found Error
-If you get a "File not found" error:
-- Make sure [`golf_scores.txt`](golf_scores.txt) is in the same directory as [`crazy_golf_analysis.py`](crazy_golf_analysis.py)
-- The script will automatically create an example file if none exists
+
+- Check `golf_scores.txt` is in the same directory as `crazy_golf_analysis.py`  
+- The script will generate an example if the file is missing  
 
 ### Import Errors
-If you get import errors, install the missing packages:
-```bash
-pip install [package_name]
-```
 
-### Visualization Issues
-If charts don't display properly:
-- Try updating matplotlib: `pip install --upgrade matplotlib`
-- Check that you have a GUI backend available for matplotlib
+- Use `pip install [package_name]` to fix missing libraries  
+
+### Visualisation Issues
+
+- Try `pip install --upgrade matplotlib`  
+- Make sure your system supports GUI windows for charts  
 
 ### No Data Found
-If the script says "No valid scores found":
-- Check that your score file follows the correct format
-- Ensure player names are followed by a colon `:`
-- Make sure scores are separated by commas or spaces
-- Verify that scores are valid integers
 
-## Customization
+- Check file formatting  
+- Use colon `:` after player names  
+- Separate scores with commas or spaces  
+- Make sure scores are valid integers  
 
-### Adding More Players
-Simply add more lines to [`golf_scores.txt`](golf_scores.txt):
-```
-New Player: 3, 2, 4, 2, 3, 2, 5, 1, 2, 3, 4, 2, 2, 3, 2, 4, 3, 2
-```
+## Customisation
+
+### Add Players
+
+Just add more lines to `golf_scores.txt`:
+
+    New Player: 3, 2, 4, 2, 3, 2, 5, 1, 2, 3, 4, 2, 2, 3, 2, 4, 3, 2
 
 ### Different Course Lengths
-The script automatically adapts to different numbers of holes per player.
 
-### Changing Output Location
-By default, visualizations are saved to your Downloads folder. To change this, modify the `plt.savefig()` path in the [`create_comprehensive_visualization`](crazy_golf_analysis.py) function.
+The script auto-adjusts to the number of holes.
 
-## License
+### Change Output Location
+
+Edit the path inside the `create_comprehensive_visualisation` function in the script.
+
+## Licence
 
 This project is open source and available for personal use.
